@@ -1,6 +1,6 @@
 
-def task_one() -> int:
-    with open('2.in', 'r') as password_file:
+def valid_passwords_rental() -> int:
+    with open('input.in', 'r') as password_file:
         valid = 0
         for line in password_file:
             # parse line
@@ -16,8 +16,8 @@ def task_one() -> int:
         return valid
 
 
-def task_two() -> int:
-    with open('2.in', 'r') as password_file:
+def valid_password_corporate() -> int:
+    with open('input.in', 'r') as password_file:
         valid = 0
         for line in password_file:
             # parse line
@@ -33,5 +33,5 @@ def task_two() -> int:
 
 
 if __name__ == "__main__":
-    print(f'Task 1: valid passwords {task_one()}')
-    print(f'Task 2: valid passwords {task_two()}')
+    print(f'Task 1: valid passwords {valid_passwords_rental()}')
+    print(f'Task 2: valid passwords {valid_password_corporate()}')

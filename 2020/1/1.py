@@ -1,6 +1,6 @@
 
-def task_one(target: int) -> int:
-    with open('1.in', 'r') as expense_report:
+def sum_two(target: int) -> int:
+    with open('input.in', 'r') as expense_report:
         numbers = [int(line) for line in expense_report]
 
         # O(n)
@@ -10,8 +10,8 @@ def task_one(target: int) -> int:
                 return number * (target - number)
             lookup[number] = 1
 
-def task_two(target: int) -> int:
-    with open('1.in', 'r') as expense_report:
+def sum_three(target: int) -> int:
+    with open('input.in', 'r') as expense_report:
         numbers = [int(line) for line in expense_report]
 
         # O(n^2)
@@ -24,5 +24,5 @@ def task_two(target: int) -> int:
                 lookup[b] = 1
 
 if __name__ == "__main__":
-    print(f'You get {task_one(target=2020)}')
-    print(f'You get {task_two(target=2020)}')
+    print(f'You get {sum_two(target=2020)}')
+    print(f'You get {sum_three(target=2020)}')
