@@ -2,7 +2,7 @@ import math
 
 
 def count_trees(maps, right: int, down: int) -> int:
-    return [maps[step*down][step*right % len(maps[0])] for step in range(0, len(maps)//down)].count('#')
+    return len([pos for step in range(0, len(maps)//down) if (pos := maps[step*down][step*right % len(maps[0])]) == '#'])
 
 
 def multiply_slopes(maps, slopes):
