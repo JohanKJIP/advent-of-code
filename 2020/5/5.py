@@ -3,7 +3,7 @@ def get_seat_id(tag: str) -> int:
     col = int(tag[7:10].replace('R', '1').replace('L', '0'), 2)
     return row * 8 + col
 
-def find_empty_seat(ids) -> (int, int):
+def find_empty_seat(ids: [int]) -> int:
     ids = sorted(ids)
     return [pass_id for i, pass_id in enumerate(ids) if (i < len(ids)-1 and pass_id + 1 != ids[i + 1])][0] + 1
 
